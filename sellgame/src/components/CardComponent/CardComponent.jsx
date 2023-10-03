@@ -1,5 +1,4 @@
 import { Card } from "antd";
-import { Meta } from "antd/es/list/Item";
 import React from "react";
 import {
   StyleNameProduct,
@@ -8,6 +7,7 @@ import {
   WrapperReportText,
 } from "./style";
 import { StarFilled } from "@ant-design/icons";
+import { WrapperStyleTextSell } from "../ProductDetailsComponent/style";
 const CardComponent = () => {
   return (
     <Card
@@ -18,18 +18,21 @@ const CardComponent = () => {
       cover={
         <img
           alt="example"
-          src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+          src="https://cdn.akamai.steamstatic.com/steam/spotlights/e8c76824353e70e1f64b2eea/spotlight_image_english.jpg?t=1696287679"
         />
       }
     >
-      <StyleNameProduct>Iphone</StyleNameProduct>
+      <StyleNameProduct>Game</StyleNameProduct>
       <WrapperReportText>
-        <span>4.9</span>{" "}
-        <StarFilled style={{ fontSize: "10px", color: "yellow" }} />
-        <span> | Đã Bán 1000++</span>
+        <span style={{ marginRight: "4px" }}>
+          <span>4.9</span>
+          <StarFilled style={{ fontSize: "10px", color: "yellow" }} />
+        </span>
+        <WrapperStyleTextSell> | Đã Bán 1000+</WrapperStyleTextSell>
       </WrapperReportText>
       <WapperPriceText>
-        200.000d <WapperDiscountText>-20%</WapperDiscountText>
+        <span style={{ marginRight: "8px" }}>200.000đ</span>
+        <WapperDiscountText>-20%</WapperDiscountText>
       </WapperPriceText>
     </Card>
   );
